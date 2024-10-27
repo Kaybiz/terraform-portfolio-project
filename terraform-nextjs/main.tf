@@ -21,7 +21,7 @@ resource "aws_s3_bucket_website_configuration" "website_config" {
   }
 }
 
-#3. OAI Resources
+#3. Origin Access Identity (OAI)
 resource "aws_cloudfront_origin_access_identity" "oai" {
   comment = "OAI for ${aws_s3_bucket.website_bucket.id}"
 }
