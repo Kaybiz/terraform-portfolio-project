@@ -24,7 +24,7 @@ contributions as I continue to improve and expand my skills.
 
 ## Architecture
 
-Below is the high-level architecture of our NextJS application infrastructure:
+Below is the high-level architecture of my NextJS application infrastructure:
 
 ![Next.JS Website Architecture](./images/Next.JS-wesbite-architecture.png)
 
@@ -159,6 +159,60 @@ I  welcome contributions to improve this project. Please follow these steps:
 3. Commit your changes
 4. Push to the branch
 5. Create a new Pull Request
+
+
+
+## Future Steps
+
+As this project continues to evolve, the following enhancements are planned:
+
+1. **Implementing CI/CD Pipeline**
+   - Integrate with Jenkins or GitHub Actions for automated testing and deployment
+   - Set up automatic deployment triggers on code pushes to specific branches
+   - Implement staged deployments (dev, staging, production)
+
+2. **AWS Resource Reconfiguration**
+   - Optimize S3 bucket settings for improved performance and cost-efficiency
+   - Enhance CloudFront distribution settings for better caching and security
+   - Implement AWS WAF for additional security layers
+
+3. **Scaling and Performance Improvements**
+   - Implement auto-scaling for handling variable loads
+   - Optimize database queries and implement caching mechanisms
+   - Conduct load testing and performance tuning
+
+## Challenges Faced
+
+During the development of this project,the challenges I encountered and overcome were:
+
+1. **S3 Bucket Policy Configuration**
+   - Issue: Initially, the S3 bucket policy was too restrictive, preventing CloudFront from accessing the files.
+   - Solution: Carefully adjusted the bucket policy to allow CloudFront access while maintaining security.
+
+2. **CloudFront Distribution Setup**
+   - Issue: Access denied from loading the cloudfront url
+   - Solution:I went back to documentation for cloudfront distribution and bucket policy. I also debugged with Amazon Q to get the right 
+permission syntax.
+
+3. **Terraform State Management**
+   - Issue: backend initialization failed due to the state file and backend sharing same s3 bucket.
+   - Solution: Implemented state locking with DynamoDB and commented out the statefile to get the back end initialized. 
+
+4. **NextJS Build Optimization**
+   - Issue: Initial builds were slow and resource-intensive especially when installing node.js
+   - Solution: patience and used top and htop command to monitor real time system operation particularly the CPU memory.
+
+These challenges provided valuable learning experiences and contributed to the robustness of the final solution.
+
+## Contact
+
+For any queries or contributions, please reach out:
+
+Kayode Ishola
+LinkedIn: [https://www.linkedin.com/in/kayode-ishola-6440699b/](https://www.linkedin.com/in/kayode-ishola-6440699b/)
+
+Your feedback and contributions are welcome as we continue to improve and expand this project!
+
 
 All feedback, suggestions, and contributions are highly appreciated as they help in the learning process and improvement of the project.
 
