@@ -3,7 +3,7 @@
 ## Project Overview
 
 This project demonstrates the deployment of a NextJS application on AWS using Terraform for infrastructure as code. It showcases how to 
-create a scalable, secure, and highly available web application infrastructure, putting into practice various cloud and DevOps concepts.
+create a scalable, secure, and highly available web application infrastructure, putting various cloud and DevOps concepts into practice.
 
 **Disclaimer:** This project is part of my learning journey in cloud engineering and DevOps. I welcome all comments, suggestions, and 
 contributions as I continue to improve and expand my skills.
@@ -20,7 +20,6 @@ contributions as I continue to improve and expand my skills.
 9. [Troubleshooting](#troubleshooting)
 10. [Cleaning Up](#cleaning-up)
 11. [Contributing](#contributing)
-12. [License](#license)
 
 ## Architecture
 
@@ -164,7 +163,7 @@ I  welcome contributions to improve this project. Please follow these steps:
 
 ## Future Steps
 
-As this project continues to evolve, the following enhancements are planned:
+As this project continues to evolve, I plan to enhance the following:
 
 1. **Implementing CI/CD Pipeline**
    - Integrate with Jenkins or GitHub Actions for automated testing and deployment
@@ -183,24 +182,24 @@ As this project continues to evolve, the following enhancements are planned:
 
 ## Challenges Faced
 
-During the development of this project,the challenges I encountered and overcome were:
+During the development of this project, the challenges I encountered and solved were:
 
 1. **S3 Bucket Policy Configuration**
    - Issue: Initially, the S3 bucket policy was too restrictive, preventing CloudFront from accessing the files.
    - Solution: Carefully adjusted the bucket policy to allow CloudFront access while maintaining security.
 
 2. **CloudFront Distribution Setup**
-   - Issue: Access denied from loading the cloudfront url
-   - Solution:I went back to documentation for cloudfront distribution and bucket policy. I also debugged with Amazon Q to get the right 
+   - Issue: Access denied from loading the CloudFront URL
+   - Solution: I went back to the documentation for Cloudfront distribution and bucket policy. I also debugged with Amazon Q to get the right 
 permission syntax.
 
 3. **Terraform State Management**
-   - Issue: backend initialization failed due to the state file and backend sharing same s3 bucket.
-   - Solution: Implemented state locking with DynamoDB and commented out the statefile to get the back end initialized. 
+   - Issue: backend initialization failed due to the state file and backend sharing the same s3 bucket.
+   - Solution: Implemented state locking with DynamoDB and commented out the state file to get the back end initialized. 
 
 4. **NextJS Build Optimization**
    - Issue: Initial builds were slow and resource-intensive especially when installing node.js
-   - Solution: patience and used top and htop command to monitor real time system operation particularly the CPU memory.
+   - Solution: patience and use top and htop commands to monitor real-time system operation, particularly the CPU memory.
 
 These challenges provided valuable learning experiences and contributed to the robustness of the final solution.
 
@@ -208,18 +207,11 @@ These challenges provided valuable learning experiences and contributed to the r
 
 For any queries or contributions, please reach out:
 
-Kayode Ishola
 LinkedIn: [https://www.linkedin.com/in/kayode-ishola-6440699b/](https://www.linkedin.com/in/kayode-ishola-6440699b/)
-
-Your feedback and contributions are welcome as we continue to improve and expand this project!
-
 
 All feedback, suggestions, and contributions are highly appreciated as they help in the learning process and improvement of the project.
 
-
----
-
 This project is a continuous learning experience. I'm always looking to improve and expand my knowledge in cloud engineering and DevOps 
-practices. If you have any suggestions, corrections, or ideas for improvement, please don't hesitate to reach out or contribute. Your input 
+practices. Please don't hesitate to reach out or contribute if you have any suggestions, corrections, or ideas for improvement. Your input 
 is valuable in this learning journey!
 
